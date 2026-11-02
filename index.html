@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Para ti, mi vida</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<!-- Degradados reutilizados por todas las rosas -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="gP1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff5f73"/><stop offset=".55" stop-color="#d8182d"/><stop offset="1" stop-color="#85101e"/></linearGradient>
+    <linearGradient id="gP2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ee3148"/><stop offset=".55" stop-color="#b9121f"/><stop offset="1" stop-color="#650812"/></linearGradient>
+    <linearGradient id="gP3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c91a2d"/><stop offset="1" stop-color="#4f0610"/></linearGradient>
+    <linearGradient id="gHoja" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1d7a42"/><stop offset="1" stop-color="#58c982"/></linearGradient>
+  </defs>
+</svg>
+
+<div id="cielo" aria-hidden="true"></div>
+<div id="petalos" aria-hidden="true"></div>
+
+<!-- PORTADA -->
+<section id="portada" class="vista">
+  <svg id="rosaPortada" class="rosa-portada" viewBox="0 0 300 340" role="img" aria-label="Una rosa roja que se dibuja sola"></svg>
+  <h1 id="titulo">Para ti</h1>
+  <p id="subtitulo" class="sub">Hice este rincón con todo mi cariño, solo para ti.</p>
+  <button id="bAbrir" class="boton grande" type="button">Abrir mi regalo 💝</button>
+
+  <div id="modulos" class="modulos" hidden>
+    <button class="modulo" type="button" data-ir="mFlores" style="--i:0">
+      <span class="ico">🌹</span><strong>Mi jardín de rosas</strong><span>Mira cómo nacen, una a una</span>
+    </button>
+    <button class="modulo" type="button" data-ir="mMusica" style="--i:1">
+      <span class="ico">🎶</span><strong>Nuestra canción</strong><span>La música que suena para ti</span>
+    </button>
+    <button class="modulo" type="button" data-ir="mFotos" style="--i:2">
+      <span class="ico">📸</span><strong>Eres hermosa</strong><span>Tus fotos y lo que veo en ellas</span>
+    </button>
+    <button class="modulo" type="button" data-ir="mMensajes" style="--i:3">
+      <span class="ico">💪</span><strong>Para que no te rindas</strong><span>Palabras para tus días difíciles</span>
+    </button>
+  </div>
+</section>
+
+<!-- MÓDULO 1: ROSAS -->
+<section id="mFlores" class="vista flores" hidden>
+  <svg id="jardin" aria-label="Jardín de rosas rojas que se dibujan solas"></svg>
+  <p class="jTitulo">Mi jardín de rosas</p>
+  <div class="jBase">
+    <p class="aviso">Toca el jardín para plantar más rosas 🌹</p>
+    <div class="acciones">
+      <button id="bRehacer" class="boton" type="button">Dibujar de nuevo 🌹</button>
+      <button class="pildora" type="button" data-ir="portada">← Volver</button>
+    </div>
+  </div>
+</section>
+
+<!-- MÓDULO 2: MÚSICA -->
+<section id="mMusica" class="vista" hidden>
+  <h2 class="tit">Nuestra canción</h2>
+  <div id="disco" class="disco" aria-hidden="true"><span>♥</span></div>
+  <p class="cancion">Iris · Goo Goo Dolls</p>
+  <p class="texto-suave">Quise que esta canción te acompañara mientras recorres este rinconcito que hice solo para ti. Que cada vez que suene recuerdes que eres vista, querida y valorada tal como eres. 💗</p>
+  <div class="acciones">
+    <button id="bPlay" class="boton" type="button">▶ Reproducir</button>
+    <button id="bVideo" class="pildora" type="button">Ver el video</button>
+  </div>
+  <label class="volumen">🔈 <input id="vol" type="range" min="0" max="100" value="70" aria-label="Volumen"></label>
+  <p class="creditos">Canción «Iris» © Goo Goo Dolls. Todos los derechos pertenecen a sus autores y sellos discográficos. Se usa solo en un proyecto personal, sin fines de lucro y sin publicarse.</p>
+  <button class="pildora" type="button" data-ir="portada">← Volver</button>
+</section>
+
+<!-- MÓDULO 3: FOTOS -->
+<section id="mFotos" class="vista" hidden>
+  <h2 class="tit">Eres hermosa</h2>
+  <div class="album">
+    <button id="bPrev" class="flecha" type="button" aria-label="Foto anterior">‹</button>
+    <figure id="marco" class="polaroid">
+      <img id="foto" alt="Una foto tuya, hermosa">
+    </figure>
+    <button id="bNext" class="flecha" type="button" aria-label="Foto siguiente">›</button>
+  </div>
+  <div class="burbuja"><p id="msgFoto"></p></div>
+  <div id="puntos" class="puntos" aria-hidden="true"></div>
+  <button class="pildora" type="button" data-ir="portada">← Volver</button>
+</section>
+
+<!-- MÓDULO 4: MENSAJES -->
+<section id="mMensajes" class="vista carta" hidden>
+  <h2 class="tit">Para que no te rindas</h2>
+  <p class="texto-suave intro">Léelos con calma. Vuelve a ellos cada vez que el camino se sienta pesado.</p>
+  <div id="listaMensajes" class="lista"></div>
+  <p id="firma" class="firma"></p>
+  <button class="pildora" type="button" data-ir="portada">← Volver</button>
+</section>
+
+<!-- REPRODUCTOR (la música sigue sonando en todas las secciones) -->
+<div id="reproductor" class="reproductor oculto">
+  <div class="barra">
+    <button id="rPlay" type="button" aria-label="Reproducir o pausar">▶</button>
+    <span class="nombre">♪ Iris · Goo Goo Dolls</span>
+    <button id="rVer" type="button" aria-label="Mostrar u ocultar el video">▴</button>
+  </div>
+  <div class="video"><div id="ytPlayer"></div></div>
+</div>
+
+<!-- Aviso si la música no puede sonar -->
+<div id="avisoMusica" class="aviso-musica" hidden>
+  <span>🎵 La música no pudo empezar. Abre la página con <strong>iniciar.bat</strong> (doble clic en esa carpeta) o <a href="https://www.youtube.com/watch?v=139ZqczxiHs" target="_blank" rel="noopener">escúchala en YouTube</a>.</span>
+  <button id="cerrarAviso" type="button" aria-label="Cerrar aviso">✕</button>
+</div>
+
+<script src="musica.js"></script>
+<script src="flores.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

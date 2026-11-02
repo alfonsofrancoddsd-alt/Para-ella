@@ -1,0 +1,25 @@
+PARA TI - proyecto personal hecho con cariño
+
+CÓMO ABRIRLO
+1. Descomprime la carpeta y haz doble clic en iniciar.bat (Windows) o iniciar.command (Mac).
+   Se abre la página en el navegador y la música suena. Necesita Python instalado.
+2. Toca "Abrir mi regalo" para que empiece la música.
+
+SI LA MÚSICA NO SUENA
+YouTube bloquea sus videos cuando la página se abre con doble clic en index.html (file://).
+Por eso conviene abrirla con iniciar.bat. Otras soluciones:
+  a) Abre una terminal dentro de la carpeta y escribe:  python -m http.server 8000
+     Luego entra a  http://localhost:8000  en el navegador.
+  b) En VS Code, instala "Live Server" y pulsa "Go Live".
+  c) Pon un archivo "musica.mp3" en esta carpeta: se usará como respaldo automáticamente.
+Necesitas internet para la canción de YouTube y para las tipografías bonitas.
+
+PERSONALIZAR (archivo script.js, arriba del todo)
+  NOMBRE  -> cómo le dices de cariño (sale en la portada)
+  FIRMA   -> cómo firmas los mensajes
+  FOTOS   -> cada foto con su mensaje (las fotos están en la carpeta fotos/)
+  MENSAJES-> las cartas motivadoras (puedes cambiar o agregar más)
+
+DERECHOS DE AUTOR
+La canción "Iris" pertenece a Goo Goo Dolls y a sus sellos discográficos. Se usa solo
+en un proyecto personal, sin fines de lucro y sin publicarse.
